@@ -1,5 +1,5 @@
 const btnEl = document.querySelector('.change-color')
-console.log()
+
 const spanEl = document.querySelector('.color')
 
 function getRandomHexColor() {
