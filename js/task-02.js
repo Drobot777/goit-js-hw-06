@@ -7,11 +7,14 @@ const ingredients = [
   'Condiments',
 ];
 const ingredientsEl = document.querySelector('#ingredients')
-const createListIngredients = ingredients.map((element) => {
-  return `<li class"item" >${element}</li>`
-}).join('')
 
- ingredientsEl.insertAdjacentHTML("afterbegin", createListIngredients) 
+const createListIngredients = ingredients.map((element) => {
+  const creatList = document.createElement('li')
+  creatList.textContent = `${element}`
+   return creatList
+})
+
+ingredientsEl.append(...createListIngredients)
 
 
 
