@@ -1,5 +1,4 @@
 const btnEl = document.querySelector('.change-color')
-
 const spanEl = document.querySelector('.color')
 
 function getRandomHexColor() {
@@ -11,6 +10,6 @@ function getRandomHexColor() {
 const onBtnColor = btnEl.addEventListener('click', colorChange )
 
 function colorChange() {
-    spanEl.textContent = getRandomHexColor()
- document.body.style.background = getRandomHexColor()
+spanEl.textContent = getRandomHexColor()
+   document.body.style.backgroundColor = `${spanEl.textContent}`
 }
