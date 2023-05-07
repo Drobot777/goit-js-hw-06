@@ -1,14 +1,13 @@
 const inputEl = document.querySelector('#validation-input');
-
-
- const onInputText = inputEl.addEventListener('input', onInputblur)  
+const onInputText = inputEl.addEventListener('input', onInputblur)  
 function onInputblur(event) {
-  if (event.currentTarget.value.length < 1 || event.currentTarget.value.length> inputEl.dataset.length) {
+  console.log(event.currentTarget.value.length)
+  if (event.currentTarget.value.length === Number(inputEl.dataset.length)) {
+     onBlurGreen()
     
-    onBlurRed()
   } else {
-    
-    onBlurGreen()
+    onBlurRed()
+   
     
   }
   
